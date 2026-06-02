@@ -1,32 +1,46 @@
-# Exception Handling in Python: Avoiding Index Errors
+# 🔤 Dictionary-Python Program to Sort a Dictionary by Keys and Values
+
+This Python program demonstrates how to sort a dictionary:
+- Alphabetically by keys
+- Alphabetically by values
+
+---
 
 ## 🎯 Aim
-To write a Python program that handles an **IndexError** when trying to access an element beyond the available range of a list.
+
+To write a Python program that sorts a dictionary's:
+- Keys in alphabetical order
+- Values in alphabetical order
+
+---
 
 ## 🧠 Algorithm
-1. Define a list `list1` with some integer elements.
-2. Use a **try-except** block:
-   - In the `try` block, attempt to access an index that is out of range (e.g., `list1[5]`).
-   - In the `except` block, catch the error and print a custom message `"You're out of list range"`.
-3. Print the result based on whether the index access succeeds or fails.
 
-## 🧾 Program
+1. **Start the program.**
+2. **Define** a dictionary with key-value pairs.
+3. **Sort by Keys**:
+   - Use `sorted(dictionary.items())`
+   - Convert the result to a dictionary using `dict()`
+4. **Sort by Values**:
+   - Use `sorted(dictionary.items(), key=lambda item: item[1])`
+   - Convert the result to a dictionary using `dict()`
+5. **Display** the original and sorted dictionaries.
+6. **End the program.**
+
+---
+
+## 🧪Program
 ```
-try:
-    # Taking 3 elements input from the user
-    L = []
-    for i in range(3):
-        item = ['laptop','mobile','pen']
-        L.append(item)
-
-    # Trying to access index 4
-    print(L[4])
-
-except IndexError:
-    print("check index range")
+data=eval(input())
+sort=dict(sorted(data.items()))
+print("Keys and Values sorted in alphabetical order by the key")
+for key, value in sort.items():
+    print(f"({key}, {value}) ",end="")
 ```
-## Output
-<img width="702" height="195" alt="530356795-2b52ccfa-a1b3-4c6e-91c4-39459023b14b" src="https://github.com/user-attachments/assets/37ba80bb-f30e-487b-b210-5834274fae76" />
+## Sample Output
+<img width="802" height="70" alt="530356676-b6b5d013-ef07-4cb4-91bf-6f19b410a681" src="https://github.com/user-attachments/assets/75b4227e-a5af-4e19-88f5-c666938cbcd3" />
 
 ## Result
 Thus the program executed successfully.
+
+
